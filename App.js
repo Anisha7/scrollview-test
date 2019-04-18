@@ -6,6 +6,7 @@ export default class App extends React.Component {
     return (
       <ScrollView
         style={styles.scrollView}
+        horizontal={true} // add for horizontal scroll
       >
 
         <View style={styles.container}>
@@ -25,7 +26,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   scrollView: {
     flex: 1,
-    height: '100%'
+    height: '100%',
+    flexDirection: 'row', // add for horizontal scroll
   },
   container: {
     flex: 1,
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   box: {
-    height: 300,
+    width: 300, // width for horizontal, height for vertical
     margin: 10,
     backgroundColor: '#f0f'
   }
